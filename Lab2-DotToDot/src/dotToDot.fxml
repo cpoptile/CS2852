@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DotToDotController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#open" text="Open" />
+                  <MenuItem mnemonicParsing="false" onAction="#exit" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Draw">
+               <items>
+                  <MenuItem fx:id="linesOnlyOption" disable="true" mnemonicParsing="false" onAction="#linesOnly" text="Lines Only" />
+                  <MenuItem fx:id="dotsOnlyOption" disable="true" mnemonicParsing="false" onAction="#dotsOnly" text="Dots Only" />
+               </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Canvas fx:id="canvas" height="968.0" rotate="180.0" width="1000.0" />
+   </children>
+</VBox>
